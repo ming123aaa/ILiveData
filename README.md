@@ -46,7 +46,7 @@ To get a Git project into your build:
         });
   ```
  ###  HandlerLiveData的使用:
-  HandlerLiveData和Handler使用差别不大 方法也只有几个.
+  HandlerLiveData和Handler使用差别不大.
  #### 发送数据：
  ```java
   //发送空消息 需要传入一个key和int类型的数据(Message.what)
