@@ -36,14 +36,15 @@ To get a Git project into your build:
  #### 接收数据:
   
    //with(,)这两个参数与上面一致.  observe(类型为LifecycleOwner在Activity或Fragment里面直接this就行,观察者)
+   '''java
     MyLiveData.getInstance().with("aa",Person.class).observe(this, new Observer<Person>() {
             @Override
             public void onChanged(Person person) {
-            ...
+            //...执行接收数据后的操作
 
             }
         });
-        
+    '''    
  ###  HandlerLiveData的使用:
   HandlerLiveData和Handler使用差别不大 方法也只有几个.
  #### 发送数据：
@@ -53,11 +54,13 @@ To get a Git project into your build:
   HandlerLiveData.getInstance().sendMsg();
   #### 接收数据：
    参数一:String:key ,参数二：LifecycleOwner,参数三：HandlerLiveData.HandlerLiveDataListener()
+   '''java
    HandlerLiveData.getInstance().addListener("aa", this, new HandlerLiveData.HandlerLiveDataListener() {
             @Override
             public void HandlerMsg(Message message) {
-               ...
+               //...执行接收数据后的操作
             }
         });
+	'''
   
   
