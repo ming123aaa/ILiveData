@@ -39,7 +39,7 @@ To get a Git project into your build:
     MyLiveData.getInstance().with("aa",Person.class).observe(this, new Observer<Person>() {
             @Override
             public void onChanged(Person person) {
-           //这里执行接收到数据后的操作
+            ...
 
             }
         });
@@ -52,11 +52,11 @@ To get a Git project into your build:
   //发送Messge消息 需要传入一个key和Message
   HandlerLiveData.getInstance().sendMsg();
   #### 接收数据：
-   参数 String:key ,LifecycleOwner,HandlerLiveData.HandlerLiveDataListener()
+   参数一:String:key ,参数二：LifecycleOwner,参数三：HandlerLiveData.HandlerLiveDataListener()
    HandlerLiveData.getInstance().addListener("aa", this, new HandlerLiveData.HandlerLiveDataListener() {
             @Override
             public void HandlerMsg(Message message) {
-               //这里执行操作
+               ...
             }
         });
   
