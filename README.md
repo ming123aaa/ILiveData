@@ -24,20 +24,19 @@ To get a Git project into your build:
 ## 简单使用：
  ### MyLiveData的使用
  #### 发送数据：
-  
+ ```java
    // with(一个String类型的key,需要传递对象的类型)   setValue(需要传的对象)
-   
-   MyLiveData.getInstance().with("aa",String.class).setValue(string);
-   
-  如果在子线程请使用postValue
   
+   MyLiveData.getInstance().with("aa",String.class).setValue(string);
+  
+ // 如果在子线程请使用postValue
+ 
    MyLiveData.getInstance().with("aa",String.class).postValue(string);
-   
+  ```
    
  #### 接收数据:
-  
-   //with(,)这两个参数与上面一致.  observe(类型为LifecycleOwner在Activity或Fragment里面直接this就行,观察者)
   ```java
+   //with(,)这两个参数与上面一致.  observe(类型为LifecycleOwner在Activity或Fragment里面直接this就行,观察者)
     MyLiveData.getInstance().with("aa",Person.class).observe(this, new Observer<Person>() {
             @Override
             public void onChanged(Person person) {
@@ -45,14 +44,18 @@ To get a Git project into your build:
 
             }
         });
-    ```
+  ```
  ###  HandlerLiveData的使用:
   HandlerLiveData和Handler使用差别不大 方法也只有几个.
  #### 发送数据：
+ ```java
   //发送空消息 需要传入一个key和int类型的数据(Message.what)
+
   HandlerLiveData.getInstance().sendEmptyMessage();
+ 
   //发送Messge消息 需要传入一个key和Message
   HandlerLiveData.getInstance().sendMsg();
+  ```
   #### 接收数据：
    参数一:String:key ,参数二：LifecycleOwner,参数三：HandlerLiveData.HandlerLiveDataListener()
    ```Java
