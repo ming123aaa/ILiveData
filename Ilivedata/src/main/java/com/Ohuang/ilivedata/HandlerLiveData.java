@@ -52,7 +52,7 @@ public class HandlerLiveData {
     }
 
 
-    interface HandlerLiveDataListener {
+   public interface HandlerLiveDataListener {
         void HandlerMsg(Message message);
     }
 }
