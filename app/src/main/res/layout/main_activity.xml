@@ -9,10 +9,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="在mainActivity显示Toast"
         android:onClick="startaa"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="改变mainActivity的text"
         android:onClick="startaab"/>
     <TextView
         android:layout_width="match_parent"

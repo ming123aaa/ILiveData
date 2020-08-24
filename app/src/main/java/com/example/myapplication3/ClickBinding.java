@@ -7,7 +7,6 @@ public class ClickBinding {
 
     public void itemClick(View view) {
         Intent intent = new Intent(view.getContext(),MainActivity2.class);
-
         view.getContext().startActivity(intent);
 
     }

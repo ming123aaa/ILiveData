@@ -18,16 +18,13 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity
-            android:name=".Main4Activity"
-            android:launchMode="standard" />
-        <activity android:name=".MainActivity3" />
+
         <activity
             android:name=".MainActivity2"
-            android:launchMode="singleInstance" />
+            />
         <activity
             android:name=".MainActivity"
-            android:launchMode="singleTask">
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
