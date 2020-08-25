@@ -27,6 +27,10 @@ public class HandlerLiveData {
     private MutableLiveData<Message> with(String key) {
         if (!map.containsKey(key)) {
             map.put(key, new MutableLiveData<Message>());
+        } else {
+            if (map.get(key) == null) {
+                map.put(key, new MutableLiveData<Message>());
+            }
         }
         return map.get(key);
     }
@@ -37,6 +41,7 @@ public class HandlerLiveData {
 
 
     private Message lsMessage = new Message();
+
     public void sendEmptyMessage(String key, int i) {
         lsMessage.what = i;
         with(key).postValue(lsMessage);
@@ -51,8 +56,12 @@ public class HandlerLiveData {
         });
     }
 
+    public void clear(String key) {
+        map.put(key, null);
+    }
 
-   public interface HandlerLiveDataListener {
+
+    public interface HandlerLiveDataListener {
         void HandlerMsg(Message message);
     }
 }

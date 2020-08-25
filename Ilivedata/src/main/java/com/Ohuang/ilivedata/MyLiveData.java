@@ -42,9 +42,18 @@ public class MyLiveData {
 
         if (!map.containsKey(key)) {
             map.put(key, (MutableLiveData<Object>) new MutableLiveData<T>());
+        }else {
+            if (map.get(key)==null){
+                map.put(key, (MutableLiveData<Object>) new MutableLiveData<T>());
+            }
         }
 
         return (MutableLiveData<T>) map.get(key);
+    }
+
+
+    public void clear(String key){
+        map.put(key,null);
     }
 
 
