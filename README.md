@@ -17,7 +17,7 @@ To get a Git project into your build:
 ### 步骤2. 加入ILiveData
 
 	dependencies {
-		implementation 'com.github.ming123aaa:ILiveData:1.5'
+		implementation 'com.github.ming123aaa:ILiveData:1.6'
 	}
 ### 步骤3.加入lifecycle的依赖：
              implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
