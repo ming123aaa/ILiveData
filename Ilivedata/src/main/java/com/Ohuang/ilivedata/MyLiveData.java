@@ -1,10 +1,10 @@
 package com.Ohuang.ilivedata;
 
-import android.app.Activity;
 
-import androidx.lifecycle.LifecycleOwner;
+
+
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
+
 
 import java.util.HashMap;
 
@@ -24,6 +24,7 @@ public class MyLiveData {
         if (myLiveData == null) {
             myLiveData = new MyLiveData();
         }
+
         return myLiveData;
     }
 

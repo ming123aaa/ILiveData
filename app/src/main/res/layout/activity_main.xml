@@ -9,6 +9,7 @@
         <variable
             name="click"
             type="com.example.myapplication3.ClickBinding" />
+
     </data>
 
     <LinearLayout

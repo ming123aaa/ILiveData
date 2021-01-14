@@ -10,15 +10,12 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.view.View;
-import android.widget.Toast;
+
 
 import com.Ohuang.ilivedata.HandlerLiveData;
 import com.Ohuang.ilivedata.MyLiveData;
 import com.example.myapplication3.bean.Person;
-import com.example.myapplication3.ui.main.MainFragment;
 
-import java.lang.ref.WeakReference;
-import java.net.Socket;
 
 public class MainActivity2 extends AppCompatActivity {
 
@@ -28,11 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, MainFragment.newInstance())
-                    .commitNow();
-        }
+
 
 //
 //        final Handler handler = new MyHandler(this);
@@ -99,7 +92,7 @@ public class MainActivity2 extends AppCompatActivity {
     public void startaab(View view) {
         //with(,)这两个参数要与接受的对应 否则会报错
         //MyLiveData.getInstance().with("1",Person.class).observe
-        Person person = new Person(2, "gayhub");
+        Person person = new Person(2, "afafasfffffffas");
         MyLiveData.getInstance().with("1", Person.class).setValue(person);
 
     }

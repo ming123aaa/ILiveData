@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         dataBinding.setPerson(person);
         dataBinding.setClick(new ClickBinding());//监听事件
 
-        //在子线程延时发送数据 这个请点击按钮跳到MainActivity2注意liveData与Handler的区别
+        //在子线程延时发送数据 这个请点击按钮跳到MainActivity2 注意liveData与Handler的区别
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -50,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                     Message message2=new Message();
                     message2.obj="大家好";
                     handler.sendMessage(message2);//使用Handler发送数据
+
+
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
