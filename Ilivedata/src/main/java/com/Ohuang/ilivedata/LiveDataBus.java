@@ -12,12 +12,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @date: 2019\10\10 0010
- * @author: zlx
- * @email: 1170762202@qq.com
- * @description:
- */
+
 public class LiveDataBus {
     private final Map<String, BusMutableLiveData<Object>> bus;
 
@@ -139,7 +134,7 @@ public class LiveDataBus {
     }
 
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
         //注册订阅
 //        LiveDataBus.get()
 //                .with("key_test", String.class)
@@ -152,5 +147,5 @@ public class LiveDataBus {
 
         //发送消息
 //        LiveDataBus.get().with("key_test").setValue("123456");
-    }
+//    }
 }
