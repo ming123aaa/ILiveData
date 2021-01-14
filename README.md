@@ -17,7 +17,7 @@ To get a Git project into your build:
 ### 步骤2. 加入ILiveData
 
 	dependencies {
-		implementation 'com.github.ming123aaa:ILiveData:1.3'
+		implementation 'com.github.ming123aaa:ILiveData:1.5'
 	}
 ### 步骤3.加入lifecycle的依赖：
              implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
@@ -46,6 +46,12 @@ To get a Git project into your build:
             }
         });
   ```
+ ### LiveDataBus的使用与MyLiveData的使用相同   两者的区别,LiveDataBus没有粘性事件,MyLiveData自带粘性事件。
+
+ ```java
+ LiveDataBus.get().with("1",String.class).setValue("123");
+ ```
+
  ###  HandlerLiveData的使用:
   HandlerLiveData和Handler使用差别不大.
  #### 发送数据：
