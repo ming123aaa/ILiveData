@@ -21,7 +21,10 @@ To get a Git project into your build:
 	}
 ### 步骤3.加入lifecycle的依赖：
              implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-  
+### 步骤4.代码混淆：
+               -keep class com.Ohuang.ilivedata.*{*;}
+               -keep class androidx.lifecycle.* { *; }
+               -keep class androidx.arch.core.internal.*{*;}'
 ## 简单使用：
  ### MyLiveData的使用
  #### 发送数据：
