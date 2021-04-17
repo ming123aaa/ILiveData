@@ -1,7 +1,6 @@
 # ILiveData
-简单的对LiveData进行封装。
-可以在Actvity和Fragment之间进行数据传递,基本可代替Handler、eventbus等进行数据传递。
-本项目仅供于初学者学习,并不保证稳定性也不进行长期的维护。
+对LiveData进行封装。
+
 ## 引入依赖：
 How to
 To get a Git project into your build:
