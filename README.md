@@ -54,26 +54,5 @@ To get a Git project into your build:
  LiveDataBus.get().with("1",String.class).setValue("123");
  ```
 
- ###  HandlerLiveData的使用:
-  HandlerLiveData和Handler使用差别不大.
- #### 发送数据：
- ```java
-  //发送空消息 需要传入一个key和int类型的数据(Message.what)
-
-  HandlerLiveData.getInstance().sendEmptyMessage();
- 
-  //发送Messge消息 需要传入一个key和Message
-  HandlerLiveData.getInstance().sendMsg();
-  ```
-  #### 接收数据：
-   参数一:String:key ,参数二：LifecycleOwner,参数三：HandlerLiveData.HandlerLiveDataListener()
-   ```Java
-   HandlerLiveData.getInstance().addListener("aa", this, new HandlerLiveData.HandlerLiveDataListener() {
-            @Override
-            public void HandlerMsg(Message message) {
-               //...执行接收数据后的操作
-            }
-        });
-```
   
   
